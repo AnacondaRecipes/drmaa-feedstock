@@ -29,10 +29,14 @@ test:
     - python run_test.py
 
 about:
-  home: https://github.com/pygridtools/drmaa-python
-  license: BSD 3-Clause
+  home: https://github.com/drmaa-python/drmaa-python
+  license: BSD
   license_file: license.txt
-  summary: Python wrapper around the C DRMAA library.
+  summary: Python wrapper around the C DRMAA library
+  description: |
+    Distributed Resource Management Application API (DRMAA) bindings for Python.
+  doc_url: http://drmaa-python.readthedocs.org
+  dev_url: https://github.com/pygridtools/drmaa-python
 
 extra:
   recipe-maintainers:
