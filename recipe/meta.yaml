@@ -24,8 +24,11 @@ requirements:
 test:
   files:
     - run_test.py
+  requires:
+    - pip
   commands:
     - python run_test.py
+    - pip check
 
 about:
   home: https://github.com/drmaa-python/drmaa-python
@@ -35,7 +38,7 @@ about:
   summary: Python wrapper around the C DRMAA library
   description: |
     Distributed Resource Management Application API (DRMAA) bindings for Python.
-  doc_url: http://drmaa-python.readthedocs.org
+  doc_url: https://drmaa-python.readthedocs.org
   dev_url: https://github.com/pygridtools/drmaa-python
 
 extra:
