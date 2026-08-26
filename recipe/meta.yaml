@@ -1,23 +1,23 @@
 {% set version = "0.7.9" %}
+{% set name = "drmaa" %}
 
 package:
-  name: drmaa
+  name: {{ name }}
   version: {{ version }}
 
 source:
-  fn: drmaa-{{ version }}.tar.gz
-  url: https://pypi.io/packages/source/d/drmaa/drmaa-{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 12540cd98afc40d5c0b2f38d7b0e46468d1c45192a2f401f41fc2eda9c9f5542
 
 build:
   number: 0
-  script: python -m pip install --no-deps --ignore-installed .
+  script: python -m pip install --no-deps --ignore-installed . --no-build-isolation
 
 requirements:
   host:
     - python
     - pip
-
+    - setuptools
   run:
     - python
 
@@ -31,6 +31,7 @@ about:
   home: https://github.com/drmaa-python/drmaa-python
   license: BSD
   license_file: license.txt
+  license_family: BSD
   summary: Python wrapper around the C DRMAA library
   description: |
     Distributed Resource Management Application API (DRMAA) bindings for Python.
